@@ -1,0 +1,36 @@
+{
+  "name": "lula-monorepo",
+  "version": "1.0.0",
+  "description": "Lula monorepo - Backend, Mobile Apps, and Admin Panel",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "nx run-many --target=build --all",
+    "dev": "nx run-many --target=dev --all --parallel",
+    "test": "nx run-many --target=test --all",
+    "lint": "nx run-many --target=lint --all",
+    "start:backend": "nx run backend:start",
+    "start:user-app": "nx run user-app:start",
+    "start:streamer-app": "nx run streamer-app:start",
+    "start:admin-web": "nx run admin-web:dev",
+    "build:backend": "nx run backend:build",
+    "build:user-app": "nx run user-app:build",
+    "build:streamer-app": "nx run streamer-app:build",
+    "build:admin-web": "nx run admin-web:build",
+    "docker:build": "docker-compose build",
+    "docker:up": "docker-compose up",
+    "docker:down": "docker-compose down"
+  },
+  "devDependencies": {
+    "@nx/js": "^21.5.3",
+    "@nx/workspace": "^21.5.3",
+    "nx": "^21.5.3",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "axios": "^1.12.2"
+  }
+}

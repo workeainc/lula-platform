@@ -1,0 +1,20 @@
+{
+  "name": "@lula/shared-utils",
+  "version": "1.0.0",
+  "description": "Shared utility functions",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "dependencies": {
+    "moment": "^2.30.1",
+    "axios": "^1.7.9"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0"
+  }
+}
